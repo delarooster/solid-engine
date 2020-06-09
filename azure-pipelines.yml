@@ -23,8 +23,8 @@ steps:
       inputs:
         command: 'build'
         projects: |
-          '$(System.DefaultWorkingDirectory)/*/*.csproj'
-        #   'solid-engine/*.sln'
+          **/*.csproj
+        #  'solid-engine/*.sln'
         #arguments: '-r $(rid) --configuration $(buildConfiguration) /p:SourceRevisionId=$(Build.SourceVersion)'
 
     # - task: DotNetCoreCLI@2
