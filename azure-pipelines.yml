@@ -16,7 +16,11 @@ steps:
       inputs:
         targetType: 'inline'
         script: |
+          cd $(Agent.BuildDirectory)
           ls
+          cd s
+          ls
+
     - task: UseDotNet@2
       inputs:
         version: '3.1.x'
@@ -27,7 +31,7 @@ steps:
       inputs:
         command: 'build'
         projects: |
-          *.csproj
+          $(Agent.BuildDirectory)/s/*.csproj
         #  'solid-engine/*.sln'
         #arguments: '-r $(rid) --configuration $(buildConfiguration) /p:SourceRevisionId=$(Build.SourceVersion)'
 
