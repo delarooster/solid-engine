@@ -21,6 +21,9 @@ steps:
           echo 'Building Directory'
           cd $(Agent.BuildDirectory)
           ls
+          echo 'Move into s folder'
+          cd s
+          ls
 
     - task: UseDotNet@2
       inputs:
