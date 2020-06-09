@@ -1,4 +1,5 @@
 # beginning pipeline for solid-engine
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
 - develop
@@ -8,7 +9,44 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  rid: 'linux-x64'
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+    - task: UseDotNet@2
+      inputs:
+        version: '3.1.x'
+        packageType: sdk
+      
+    - task: DotNetCoreCLI@2
+      displayName: 'dotnet build $(buildConfiguration)'
+      inputs:
+        command: 'build'
+        arguments: '-r $(rid) --configuration $(buildConfiguration) /p:SourceRevisionId=$(Build.SourceVersion)'
+
+    # - task: DotNetCoreCLI@2
+    #   displayName: "Test"
+    #   inputs:
+    #     command: test
+    #     projects: '**/*tests/*.csproj'
+    #     arguments: '--runtime $(rid) --configuration $(buildConfiguration)'
+
+    # - task: DotNetCoreCLI@2
+    #   displayName: "Publish"
+    #   inputs:
+    #     command: 'publish'
+    #     publishWebProjects: true
+    #     arguments: '-r $(rid) --no-build --configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    #     zipAfterPublish: true
+
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+        ConnectionType: 'PublishProfile'
+        PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/*.pubxml'
+        PublishProfilePassword: '$(PublishingProfilePassword)'
+        packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
+    - task: PublishBuildArtifacts@1
+      displayName: "Upload Artifacts"
+      inputs:
+        pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+        artifactName: 'solid-engine-artifact'
