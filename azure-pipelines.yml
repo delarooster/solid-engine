@@ -12,7 +12,11 @@ variables:
   rid: 'linux-x64'
 
 steps:
-    #- task: 
+    - task: Bash@3
+      inputs:
+        targetType: 'inline'
+        script: |
+          ls
     - task: UseDotNet@2
       inputs:
         version: '3.1.x'
@@ -23,7 +27,7 @@ steps:
       inputs:
         command: 'build'
         projects: |
-          **/*.csproj
+          *.csproj
         #  'solid-engine/*.sln'
         #arguments: '-r $(rid) --configuration $(buildConfiguration) /p:SourceRevisionId=$(Build.SourceVersion)'
 
