@@ -21,7 +21,7 @@ steps:
       displayName: 'dotnet build $(buildConfiguration)'
       inputs:
         command: 'build'
-        projects: '**/*.sln'
+        projects: '**/*/*.csproj'
         arguments: '-r $(rid) --configuration $(buildConfiguration) /p:SourceRevisionId=$(Build.SourceVersion)'
 
     # - task: DotNetCoreCLI@2
