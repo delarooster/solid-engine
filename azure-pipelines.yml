@@ -12,19 +12,6 @@ variables:
   rid: 'linux-x64'
 
 steps:
-    - task: Bash@3
-      inputs:
-        targetType: 'inline'
-        script: |
-          echo 'Current directory'
-          ls
-          echo 'Building Directory'
-          cd $(Agent.BuildDirectory)
-          ls
-          echo 'Move into s folder'
-          cd s
-          ls
-
     - task: UseDotNet@2
       inputs:
         version: '3.1.x'
@@ -36,31 +23,8 @@ steps:
         command: 'build'
         projects: |
           $(Agent.BuildDirectory)/s/*.csproj
-        #  'solid-engine/*.sln'
-        #arguments: '-r $(rid) --configuration $(buildConfiguration) /p:SourceRevisionId=$(Build.SourceVersion)'
 
-    # - task: DotNetCoreCLI@2
-    #   displayName: "Test"
-    #   inputs:
-    #     command: test
-    #     projects: '**/*tests/*.csproj'
-    #     arguments: '--runtime $(rid) --configuration $(buildConfiguration)'
-
-    # - task: DotNetCoreCLI@2
-    #   displayName: "Publish"
-    #   inputs:
-    #     command: 'publish'
-    #     publishWebProjects: true
-    #     arguments: '-r $(rid) --no-build --configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    #     zipAfterPublish: true
-
-    - task: AzureRmWebAppDeployment@4
-      inputs:
-        ConnectionType: 'PublishProfile'
-        PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/*.pubxml'
-        PublishProfilePassword: '$(PublishingProfilePassword)'
-        packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-
+#deploy to Azure here
     - task: PublishBuildArtifacts@1
       displayName: "Upload Artifacts"
       inputs:
