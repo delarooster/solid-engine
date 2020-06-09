@@ -22,7 +22,7 @@ steps:
       inputs:
         command: 'build'
         projects: |
-          'solid-engine/solid-engine.csproj'
+          '**/*/*.csproj'
         #   'solid-engine/*.sln'
         #arguments: '-r $(rid) --configuration $(buildConfiguration) /p:SourceRevisionId=$(Build.SourceVersion)'
 
