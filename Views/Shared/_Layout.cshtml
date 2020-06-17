@@ -29,15 +29,15 @@
 </head>
 <header>
     <nav class="navbar">
-        <div class="container">
-            <ul class="navbar-list">
-                <li class="navbar-item">
-                    <a class="navbar-link" href="#home">solid-engine</a>
-                    <a class="navbar-link" href="#privacy">privacy</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+            <div class="container">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a class="navbar-link" asp-area="" asp-controller="Home" asp-action="Index">solid-engine</a>
+                        <a class="navbar-link" asp-area="" asp-controller="Home" asp-action="Privacy">privacy</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 </header>
 @RenderBody()
 </html>
