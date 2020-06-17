@@ -22,6 +22,10 @@ namespace solid_engine.Controllers
         {
             return View();
         }
+        public IActionResult UserLogin()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
