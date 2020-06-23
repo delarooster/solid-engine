@@ -2,13 +2,1292 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container">
-    <div class="row">
-        <div class="one-half column" style="margin-top: 25%">
-            @* here for reference http://www.getskeleton.com*@
-            <p>+ JMJ +</p>
-            <h1>Welcome to Solid Core</h1>
-            <p>This is a test for beginning the rewrite</p>
+@*<div class="container">
+        <div class="row">
+            <div class="one-half column" style="margin-top: 25%">
+                here for reference http://www.getskeleton.com
+                <p>+ JMJ +</p>
+                <h1>Welcome to Solid Core</h1>
+                <p>This is a test for beginning the rewrite</p>
+            </div>
         </div>
+    </div>*@
+<!-- ============================================================== -->
+<!-- Top header  -->
+<!-- ============================================================== -->
+<!-- ============================ Hero Banner  Start================================== -->
+<div class="image-cover hero-banner" style="background:url(https://via.placeholder.com/1920x1000) no-repeat;" data-overlay="6">
+    <div class="container">
+
+        <h1 class="big-header-capt capti">Discover Great Places</h1>
+        <ul class="nav nav-tabs" id="multiSearchtab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="places-tab" data-toggle="tab" href="#places" role="tab" aria-controls="places" aria-selected="true">Places</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="events" aria-selected="false">Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="restaurants-tab" data-toggle="tab" href="#restaurants" role="tab" aria-controls="restaurants" aria-selected="false">Restaurants</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="hotels-tab" data-toggle="tab" href="#hotels" role="tab" aria-controls="hotels" aria-selected="false">Hotels</a>
+            </li>
+        </ul>
+        <div class="full-search-2 italian-search hero-search-radius box-style">
+            <div class="hero-search-content">
+
+                <div class="tab-content" id="multi-Search-tab">
+                    <div class="tab-pane fade show active" id="places" role="tabpanel" aria-labelledby="places-tab">
+                        <div class="row">
+
+                            <div class="col-lg-4 col-md-4 col-sm-12 small-padd">
+                                <div class="form-group">
+                                    <div class="input-with-icon">
+                                        <input type="text" class="form-control b-r" placeholder="Keywords...">
+                                        <i class="theme-cl ti-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 small-padd">
+                                <div class="form-group">
+                                    <div class="input-with-icon">
+                                        <input type="text" class="form-control b-r" placeholder="Location...">
+                                        <i class="theme-cl ti-target"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-6 small-padd">
+                                <div class="form-group">
+                                    <div class="input-with-icon">
+                                        <select id="list-category" class="form-control">
+                                            <option value="">&nbsp;</option>
+                                            <option value="1">Spa & Bars</option>
+                                            <option value="2">Restaurants</option>
+                                            <option value="3">Hotels</option>
+                                            <option value="4">Educations</option>
+                                            <option value="5">Business</option>
+                                            <option value="6">Retail & Shops</option>
+                                            <option value="7">Garage & Services</option>
+                                        </select>
+                                        <i class="theme-cl ti-briefcase"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-sm-12 small-padd">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <a href="#" class="btn search-btn">Search</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="events-tab">
+                        <div class="row">
+
+                            <div class="col-lg-4 col-md-4 col-sm-12 small-padd">
+                                <div class="form-group">
+                                    <div class="input-with-icon">
+                                        <input type="text" class="form-control b-r" placeholder="Keywords...">
+                                        <i class="theme-cl ti-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 small-padd upper-abs">
+                                <div class="form-group">
+                                    <div class="input-with-icon">
+                                        <!-- Guest Box -->
+                                        <input type="text" class="form-control" placeholder="Check-In - Check-Out" id="booking-date-search">
+                                        <i class="theme-cl ti-target"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-6 small-padd">
+                                <div class="form-group">
+                                    <div class="input-with-icon  b-l">
+                                        <select id="event-list-category" class="form-control">
+                                            <option value="">&nbsp;</option>
+                                            <option value="1">Spa & Bars</option>
+                                            <option value="2">Restaurants</option>
+                                            <option value="3">Hotels</option>
+                                            <option value="4">Educations</option>
+                                            <option value="5">Business</option>
+                                            <option value="6">Retail & Shops</option>
+                                            <option value="7">Garage & Services</option>
+                                        </select>
+                                        <i class="theme-cl ti-briefcase"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-sm-12 small-padd">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <a href="#" class="btn search-btn">Search</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="restaurants" role="tabpanel" aria-labelledby="restaurants-tab">
+                        <div class="row">
+
+                            <div class="col-lg-4 col-md-4 col-sm-12 small-padd">
+                                <div class="form-group">
+                                    <div class="input-with-icon">
+                                        <input type="text" class="form-control b-r" placeholder="Keywords...">
+                                        <i class="theme-cl ti-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 small-padd">
+                                <div class="form-group">
+                                    <div class="input-with-icon">
+                                        <input type="text" class="form-control b-r" placeholder="Location...">
+                                        <i class="theme-cl ti-target"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 small-padd upper-abs">
+                                <div class="form-group">
+                                    <div class="input-with-icon">
+                                        <!-- Guest Box -->
+                                        <div class="filter-group">
+                                            <button type="button" class="filter-btn" id="guest">
+                                                Guest<span class="bn-count theme-bg">0</span>
+                                            </button>
+                                            <div class="dropdown-menu" id="g-showing">
+                                                <div class="drop-content-wrap">
+                                                    <div class="row m-0 pt-3 pb-4">
+                                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>Guest</label>
+                                                                <div class="guest-picker">
+                                                                    <div class="qty">
+                                                                        <span class="gminus"><i class="ti-minus"></i></span>
+                                                                        <input type="number" class="guest" name="qty" value="1">
+                                                                        <span class="gplus"><i class="ti-plus"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>Children</label>
+                                                                <div class="guest-picker">
+                                                                    <div class="qty">
+                                                                        <span class="cminus"><i class="ti-minus"></i></span>
+                                                                        <input type="number" class="children" name="qty" value="0">
+                                                                        <span class="cplus"><i class="ti-plus"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="drop-footer">
+                                                        <a href="#" class="clear-filt">Clear</a>
+                                                        <a href="#" class="btn btn-theme">Save</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <i class="theme-cl ti-target"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-sm-12 small-padd">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <a href="#" class="btn search-btn">Search</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="hotels" role="tabpanel" aria-labelledby="hotels-tab">
+                        <div class="row">
+
+                            <div class="col-lg-4 col-md-4 col-sm-12 small-padd">
+                                <div class="form-group">
+                                    <div class="input-with-icon">
+                                        <input type="text" class="form-control b-r" placeholder="Keywords...">
+                                        <i class="theme-cl ti-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 small-padd">
+                                <div class="form-group">
+                                    <div class="input-with-icon">
+                                        <input type="text" class="form-control b-r" placeholder="Location...">
+                                        <i class="theme-cl ti-target"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 small-padd upper-abs">
+                                <div class="form-group">
+                                    <div class="input-with-icon">
+                                        <!-- Guest Box -->
+                                        <div class="filter-group">
+                                            <button type="button" class="filter-btn" id="hotel-guest">
+                                                Guest<span class="bn-count theme-bg">0</span>
+                                            </button>
+                                            <div class="dropdown-menu" id="hotelg-showing">
+                                                <div class="drop-content-wrap">
+                                                    <div class="row m-0 pt-3 pb-4">
+                                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>Guest</label>
+                                                                <div class="guest-picker">
+                                                                    <div class="qty">
+                                                                        <span class="gminus"><i class="ti-minus"></i></span>
+                                                                        <input type="number" class="guest" name="qty" value="1">
+                                                                        <span class="gplus"><i class="ti-plus"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>Children</label>
+                                                                <div class="guest-picker">
+                                                                    <div class="qty">
+                                                                        <span class="cminus"><i class="ti-minus"></i></span>
+                                                                        <input type="number" class="children" name="qty" value="0">
+                                                                        <span class="cplus"><i class="ti-plus"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="drop-footer">
+                                                        <a href="#" class="clear-filt">Clear</a>
+                                                        <a href="#" class="btn btn-theme">Save</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <i class="theme-cl ti-target"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-sm-12 small-padd">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <a href="#" class="btn search-btn">Search</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="popular-cat-list">
+            <ul>
+                <li><a href="#">Hotel & Spa</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Shopping</a></li>
+                <li><a href="#">Restaurants</a></li>
+            </ul>
+        </div>
+
     </div>
 </div>
+<!-- ============================ Hero Banner End ================================== -->
+<!-- ================= Recent Listings ========================= -->
+<section>
+    <div class="container">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-advance theme-bg" role="tablist">
+            <li class="nav-item active">
+                <a class="nav-link" data-toggle="tab" href="#recent" role="tab">
+                    Recent Listing
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#featured" role="tab">
+                    Featured Listing
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+
+            <!-- Recent Listings -->
+            <div class="tab-pane fade in show active" id="recent" role="tabpanel">
+                <div class="row">
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">Featured</span>
+                                    <span class="pricetag">$25 - $65</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate good">4.2</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Castle Palace</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Best Marriage Palace in The UK</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="ti-briefcase bg-a"></i>Services</a>
+                                    <span class="more-cat">+4</span>
+                                </div>
+                                <span class="place-status">Open</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">$20 - $55</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate great">5</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Avenue Mall</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Luxury Shopping Mall in The Austrailia</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="ti-shopping-cart-full bg-b"></i>Shoping Mall</a>
+                                    <span class="more-cat">+2</span>
+                                </div>
+                                <span class="place-status">Open</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">Featured</span>
+                                    <span class="pricetag">$30 - $60</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate medium">3.2</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Beauty Spa</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Fully Spa & Massage Services</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="ti-home bg-m"></i>Spa & Massage</a>
+                                    <span class="more-cat">+3</span>
+                                </div>
+                                <span class="place-status closed">Closed</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">$25 - $65</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate great">5</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Sweet Restaurants</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Super Clean & Cool Restaurants In Canada</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="lni-burger bg-d"></i>Eat & Dring</a>
+                                    <span class="more-cat">+6</span>
+                                </div>
+                                <span class="place-status">Open</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">$40 - $55</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate poor">2.7</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Veero Events</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Book Veero Management for Your Eventss</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="ti-calendar bg-n"></i>Events</a>
+                                    <span class="more-cat">+5</span>
+                                </div>
+                                <span class="place-status closed">Closed</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">Featured</span>
+                                    <span class="pricetag">$45 - $70</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate good">4.2</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Hilly Salon</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Modern Hair Style Salon In India</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="ti-briefcase bg-f"></i>Services</a>
+                                    <span class="more-cat">+2</span>
+                                </div>
+                                <span class="place-status">Open</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Featured listings -->
+            <div class="tab-pane fade" id="featured" role="tabpanel">
+                <div class="row">
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">$25 - $65</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate great">5</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Sweet Restaurants</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Super Clean & Cool Restaurants In Canada</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="lni-burger bg-d"></i>Eat & Dring</a>
+                                    <span class="more-cat">+6</span>
+                                </div>
+                                <span class="place-status">Open</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">$40 - $55</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate poor">2.7</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Veero Events</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Book Veero Management for Your Eventss</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="ti-calendar bg-n"></i>Events</a>
+                                    <span class="more-cat">+5</span>
+                                </div>
+                                <span class="place-status closed">Closed</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">Featured</span>
+                                    <span class="pricetag">$45 - $70</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate good">4.2</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Hilly Salon</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Modern Hair Style Salon In India</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="ti-briefcase bg-f"></i>Services</a>
+                                    <span class="more-cat">+2</span>
+                                </div>
+                                <span class="place-status">Open</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">Featured</span>
+                                    <span class="pricetag">$25 - $65</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate good">4.2</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Castle Palace</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Best Marriage Palace in The UK</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="ti-briefcase bg-a"></i>Services</a>
+                                    <span class="more-cat">+4</span>
+                                </div>
+                                <span class="place-status">Open</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">$20 - $55</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate great">5</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Avenue Mall</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Luxury Shopping Mall in The Austrailia</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="ti-shopping-cart-full bg-b"></i>Shoping Mall</a>
+                                    <span class="more-cat">+2</span>
+                                </div>
+                                <span class="place-status">Open</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Single List -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property_item classical-list">
+                            <div class="image">
+                                <a href="listing-detail.html" class="listing-thumb">
+                                    <img src="https://via.placeholder.com/1200x850" alt="latest property" class="img-responsive">
+                                </a>
+                                <div class="listing-price-info">
+                                    <span class="pricetag">Featured</span>
+                                    <span class="pricetag">$30 - $60</span>
+                                </div>
+                                <a href="#" class="tag_t"><i class="ti-heart"></i>Save</a>
+                                <span class="list-rate medium">3.2</span>
+                            </div>
+
+                            <div class="proerty_content">
+                                <div class="author-avater">
+                                    <img src="https://via.placeholder.com/400x400" class="author-avater-img" alt="">
+                                </div>
+                                <div class="proerty_text">
+                                    <h3 class="captlize"><a href="listing-detail.html">Beauty Spa</a><span class="veryfied-author"></span></h3>
+                                </div>
+                                <p class="property_add">Fully Spa & Massage Services</p>
+                                <div class="property_meta">
+                                    <div class="list-fx-features">
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-add">Seek Velly, CA</span>
+                                        </div>
+                                        <div class="listing-card-info-icon">
+                                            <span class="inc-fleat inc-call">+91 2356 548 958</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listing-footer-info">
+                                <div class="listing-cat">
+                                    <a href="search-listing.html" class="cat-icon cl-1"><i class="ti-home bg-m"></i>Spa & Massage</a>
+                                    <span class="more-cat">+3</span>
+                                </div>
+                                <span class="place-status closed">Closed</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-12 mrg-top-40">
+            <div class="text-center">
+                <a href="full-width-listing.html" class="btn btn-theme btn-m">Browse More Listings</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- ================================ Recent Listings ==================================== -->
+<!-- ============================ Listing Ctegory Start ================================== -->
+<section class="gray-bg">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="sec-heading center">
+                    <h2>Featured & New category</h2>
+                    <p>Top & perfect 200+ listings category.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="owl-carousel owl-theme" id="lists-slide">
+
+                <!-- Single List -->
+                <div class="list-slide-box">
+                    <a class="single-moderns-category " href="single-category.html">
+                        <figure>
+                            <img src="https://via.placeholder.com/1200x850" title="store" alt="store">
+                            <figcaption class="overlay-bg">
+                                <div class="cat-box">
+                                    <div class="icon">
+                                        <span class="ti-truck"></span>
+                                    </div>
+                                    <div class="cat-info">
+                                        <h4 class="cat-name">Store</h4>
+                                        <span class="badge badge-pill theme-bg">02 Listings</span>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <!-- Single List -->
+                <div class="list-slide-box">
+                    <a class="single-moderns-category " href="single-category.html">
+                        <figure>
+                            <img src="https://via.placeholder.com/1200x850" title="hotel" alt="hotel">
+                            <figcaption class="overlay-bg">
+                                <div class="cat-box">
+                                    <div class="icon">
+                                        <span class="ti-home"></span>
+                                    </div>
+                                    <div class="cat-info">
+                                        <h4 class="cat-name">Hotels</h4>
+                                        <span class="badge badge-pill theme-bg">07 Listings</span>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <!-- Single List -->
+                <div class="list-slide-box">
+                    <a class="single-moderns-category " href="single-category.html">
+                        <figure>
+                            <img src="https://via.placeholder.com/1200x850" title="Shopping" alt="Shopping">
+                            <figcaption class="overlay-bg">
+                                <div class="cat-box">
+                                    <div class="icon">
+                                        <span class="ti-shopping-cart"></span>
+                                    </div>
+                                    <div class="cat-info">
+                                        <h4 class="cat-name">Shopping</h4>
+                                        <span class="badge badge-pill theme-bg">04 Listings</span>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <!-- Single List -->
+                <div class="list-slide-box">
+                    <a class="single-moderns-category " href="single-category.html">
+                        <figure>
+                            <img src="https://via.placeholder.com/1200x850" title="Places" alt="Places">
+                            <figcaption class="overlay-bg">
+                                <div class="cat-box">
+                                    <div class="icon">
+                                        <span class="ti-location-pin"></span>
+                                    </div>
+                                    <div class="cat-info">
+                                        <h4 class="cat-name">Places</h4>
+                                        <span class="badge badge-pill theme-bg">05 Listings</span>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <!-- Single List -->
+                <div class="list-slide-box">
+                    <a class="single-moderns-category " href="single-category.html">
+                        <figure>
+                            <img src="https://via.placeholder.com/1200x850" title="Restaurants" alt="Restaurants">
+                            <figcaption class="overlay-bg">
+                                <div class="cat-box">
+                                    <div class="icon">
+                                        <i class="lni-burger"></i>
+                                    </div>
+                                    <div class="cat-info">
+                                        <h4 class="cat-name">Restaurants</h4>
+                                        <span class="badge badge-pill theme-bg">08 Listings</span>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <!-- Single List -->
+                <div class="list-slide-box">
+                    <a class="single-moderns-category " href="single-category.html">
+                        <figure>
+                            <img src="https://via.placeholder.com/1200x850" title="Marriage Hall" alt="Marriage Hall">
+                            <figcaption class="overlay-bg">
+                                <div class="cat-box">
+                                    <div class="icon">
+                                        <span class="ti-heart"></span>
+                                    </div>
+                                    <div class="cat-info">
+                                        <h4 class="cat-name">Marriage Hall</h4>
+                                        <span class="badge badge-pill theme-bg">07 Listings</span>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- ============================ Listing Category End ================================== -->
+<!-- ============================ Destination Start ================================== -->
+<section>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="sec-heading center">
+                    <h2>Find By Locations</h2>
+                    <p>Top &amp; perfect 200+ location listings.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-8 col-md-8">
+                <a href="list-layout-with-sidebar.html" class="img-wrap">
+                    <div class="img-wrap-content visible">
+                        <h4>Los Angeles</h4>
+                        <span>24 Listins</span>
+                    </div>
+                    <div class="img-wrap-background" style="background-image: url(https://via.placeholder.com/1200x850);"></div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-4">
+                <a href="list-layout-with-sidebar.html" class="img-wrap">
+                    <div class="img-wrap-content visible">
+                        <h4>San Francisco</h4>
+                        <span>104 Listins</span>
+                    </div>
+                    <div class="img-wrap-background" style="background-image: url(https://via.placeholder.com/1200x850);"></div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-4">
+                <a href="list-layout-with-sidebar.html" class="img-wrap">
+                    <div class="img-wrap-content visible">
+                        <h4>Philadelphia</h4>
+                        <span>74 Listins</span>
+                    </div>
+                    <div class="img-wrap-background" style="background-image: url(https://via.placeholder.com/1200x850);"></div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-4">
+                <a href="list-layout-with-sidebar.html" class="img-wrap">
+                    <div class="img-wrap-content visible">
+                        <h4>New York</h4>
+                        <span>312 Listins</span>
+                    </div>
+                    <div class="img-wrap-background" style="background-image: url(https://via.placeholder.com/1200x850);"></div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-4">
+                <a href="list-layout-with-sidebar.html" class="img-wrap">
+                    <div class="img-wrap-content visible">
+                        <h4>San Diego</h4>
+                        <span>710 Listins</span>
+                    </div>
+                    <div class="img-wrap-background" style="background-image: url(https://via.placeholder.com/1200x850);"></div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- ============================ Destination End ================================== -->
+<!-- ============================ Smart Testimonials ================================== -->
+<section class="image-cover pb-0" style="background:#122947 url(assets/img/pattern.png) no-repeat;">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 col-md-7">
+                <h2 class="text-light">What People Says?</h2>
+
+                <div class="smart-textimonials smart-light" id="smart-textimonials">
+
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="smart-tes-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <div class="smart-tes-author">
+                            <div class="st-author-box">
+                                <div class="st-author-thumb">
+                                    <img src="https://via.placeholder.com/400x400" class="img-fluid" alt="" />
+                                </div>
+                                <div class="st-author-info">
+                                    <h4 class="st-author-title">Adam Williams</h4>
+                                    <span class="st-author-subtitle">CEO Of Microwoft</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="smart-tes-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <div class="smart-tes-author">
+                            <div class="st-author-box">
+                                <div class="st-author-thumb">
+                                    <img src="https://via.placeholder.com/400x400" class="img-fluid" alt="" />
+                                </div>
+                                <div class="st-author-info">
+                                    <h4 class="st-author-title">Rita Deluxea</h4>
+                                    <span class="st-author-subtitle">CEO Of Microwoft</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="smart-tes-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <div class="smart-tes-author">
+                            <div class="st-author-box">
+                                <div class="st-author-thumb">
+                                    <img src="https://via.placeholder.com/400x400" class="img-fluid" alt="" />
+                                </div>
+                                <div class="st-author-info">
+                                    <h4 class="st-author-title">Adam Gilwarm</h4>
+                                    <span class="st-author-subtitle">CEO Of Applioa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="smart-tes-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <div class="smart-tes-author">
+                            <div class="st-author-box">
+                                <div class="st-author-thumb">
+                                    <img src="https://via.placeholder.com/400x400" class="img-fluid" alt="" />
+                                </div>
+                                <div class="st-author-info">
+                                    <h4 class="st-author-title">Adam Williams</h4>
+                                    <span class="st-author-subtitle">CEO Of Missward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="smart-tes-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <div class="smart-tes-author">
+                            <div class="st-author-box">
+                                <div class="st-author-thumb">
+                                    <img src="https://via.placeholder.com/400x400" class="img-fluid" alt="" />
+                                </div>
+                                <div class="st-author-info">
+                                    <h4 class="st-author-title">Shilpa Srivastava</h4>
+                                    <span class="st-author-subtitle">CEO Of Microwoft</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-5">
+                <img src="assets/img/mansmiling.png" class="img-fluid" alt="">
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ============================ Smart Testimonials End ================================== -->
+<!-- ================================== Join Us Start ==================================== -->
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 col-md-6">
+                <div class="explore-content">
+                    <h2>Join With Us & Earn Money Easly</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem sed do eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                    <a href="#" class="btn btn-theme mt-3">Create An Account</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <img src="assets/img/join-img.png" class="img-fluid" alt="" />
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- =================================== Join Us End =================================== -->
+<!-- ============================ Newsletter Start ================================== -->
+<section class="newsletter theme-bg" style="background-image:url(assets/img/bg-new.png)">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="sec-heading light center">
+                    <h2>Get Latest News</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                <div class="newsletter-box text-center">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="ti-email theme-cl"></span></span>
+                        <input type="text" class="form-control" placeholder="Enter your Email..">
+                    </div>
+                    <button type="button" class="btn btn-theme btn-rounded btn-m">subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============================ Newsletter End ================================== -->

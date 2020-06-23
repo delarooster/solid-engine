@@ -15,7 +15,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\lib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\src\datedropper.svg" />
+    <None Include="wwwroot\fonts\fa-brands-400.svg" />
+    <None Include="wwwroot\fonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\fonts\fa-regular-400.svg" />
+    <None Include="wwwroot\fonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\fonts\fa-solid-900.svg" />
+    <None Include="wwwroot\fonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\fonts\icofont.svg" />
+    <None Include="wwwroot\fonts\icofont.woff2" />
+    <None Include="wwwroot\fonts\LineIcons.svg" />
+    <None Include="wwwroot\fonts\themify.svg" />
+    <None Include="wwwroot\img\add.svg" />
+    <None Include="wwwroot\img\call.svg" />
+    <None Include="wwwroot\img\type.svg" />
   </ItemGroup>
 
 </Project>
