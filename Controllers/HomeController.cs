@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using solid_engine.DAL;
 using solid_engine.Models;
 
 namespace solid_engine.Controllers
@@ -18,8 +19,9 @@ namespace solid_engine.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            await WriteToCosmos.Write();
             return View();
         }
         public IActionResult UserLogin()
