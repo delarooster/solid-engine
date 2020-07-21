@@ -44,7 +44,6 @@ namespace solid_engine.DAL
             finally
             {
                 Console.WriteLine("End of demo, press any key to exit.");
-                Console.ReadKey();
             }
         }
 
@@ -90,26 +89,26 @@ namespace solid_engine.DAL
         {
             var member = new Member
             {
+                Id = "DeLaRosa.1",
                 Administrator = false,
                 FirstName = "Austin",
-                LastName = "DeLaRosa",
-                Id = ""
+                LastName = "DeLaRosa"
             };
 
-            // Read the item to see if it exists. Note ReadItemAsync will not throw an exception if an item does not exist. Instead, we check the StatusCode property off the response object. 
-            ItemResponse<Member> memberResponse = await this.container.ReadItemAsync<Member>(member.Id, new PartitionKey(member.LastName));
-
+            ResponseMessage memberResponse = await this.container.ReadItemStreamAsync(member.Id, new PartitionKey(member.LastName));
+            ItemResponse<Member> response = null;
+            
             if (memberResponse.StatusCode == HttpStatusCode.NotFound)
             {
                 // Create an item in the container representing the Andersen family. Note we provide the value of the partition key for this item, which is "Andersen"
-                memberResponse = await this.container.CreateItemAsync<Member>(member, new PartitionKey(member.LastName));
+                response = await this.container.CreateItemAsync<Member>(member);
 
                 // Note that after creating the item, we can access the body of the item with the Resource property off the ItemResponse. We can also access the RequestCharge property to see the amount of RUs consumed on this request.
-                Console.WriteLine("Created item in database with id: {0} Operation consumed {1} RUs.\n", memberResponse.Resource.Id, memberResponse.RequestCharge);
+                Console.WriteLine($"Created item in database with id: {member.Id} Operation consumed {response.RequestCharge} RUs.\n", response.Resource.Id, response.RequestCharge);
             }
             else
             {
-                Console.WriteLine("Item in database with id: {0} already exists\n", memberResponse.Resource.Id);
+                Console.WriteLine($"Item in database with id: {member.Id} already exists\n", response.Resource.Id);
             }
         }
 
