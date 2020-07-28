@@ -10,7 +10,7 @@ namespace solid_engine.Models
     public class Member
     {
         [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; } = "";
+        public string Id { get; set; }
         [JsonProperty(PropertyName = "firstName")]
         public string FirstName { get; set; }
         [JsonProperty(PropertyName = "lastName")]

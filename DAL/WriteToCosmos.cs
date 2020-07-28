@@ -24,13 +24,18 @@ namespace solid_engine.DAL
         private string databaseId = "TestDatabase";
         private string containerId = "TestContainer";
 
-        public static async Task Write(string[] args = null)
+        public static async void Run(string username)
+        {
+            await Write(username);
+        }
+
+        public static async Task Write(string username, string[] args = null)
         {
             try
             {
                 Console.WriteLine("Beginning operations...\n");
                 WriteToCosmos p = new WriteToCosmos();
-                await p.GetStartedDemoAsync();
+                await p.GetStartedDemoAsync(username);
             }
             catch (CosmosException de)
             {
@@ -50,7 +55,7 @@ namespace solid_engine.DAL
         /*
             Entry point to call methods that operate on Azure Cosmos DB resources in this sample
         */
-        public async Task GetStartedDemoAsync()
+        public async Task GetStartedDemoAsync(string username)
         {
             _settings.EndpointUri = "https://solid-core-cosmosdb.documents.azure.com:443/";
             _settings.PrimaryKey =
@@ -59,7 +64,7 @@ namespace solid_engine.DAL
             this.cosmosClient = new CosmosClient(_settings.EndpointUri, _settings.PrimaryKey);
             await this.CreateDatabaseAsync();
             await this.CreateContainerAsync();
-            await this.AddItemsToContainerAsync();
+            await this.AddItemsToContainerAsync(username);
             await this.QueryItemsAsync();
             //await this.ReplaceFamilyItemAsync();
             //await this.DeleteFamilyItemAsync();
@@ -85,14 +90,14 @@ namespace solid_engine.DAL
         /*
         Add Family items to the container
         */
-        private async Task AddItemsToContainerAsync()
+        private async Task AddItemsToContainerAsync(string userInfo)
         {
             var member = new Member
             {
-                Id = "DeLaRosa.1",
+                Id = "Anderson.1",
                 Administrator = false,
-                FirstName = "Austin",
-                LastName = "DeLaRosa"
+                FirstName = "Irving",
+                LastName = "Anderson"
             };
 
             ResponseMessage memberResponse = await this.container.ReadItemStreamAsync(member.Id, new PartitionKey(member.LastName));
@@ -100,10 +105,8 @@ namespace solid_engine.DAL
             
             if (memberResponse.StatusCode == HttpStatusCode.NotFound)
             {
-                // Create an item in the container representing the Andersen family. Note we provide the value of the partition key for this item, which is "Andersen"
                 response = await this.container.CreateItemAsync<Member>(member);
 
-                // Note that after creating the item, we can access the body of the item with the Resource property off the ItemResponse. We can also access the RequestCharge property to see the amount of RUs consumed on this request.
                 Console.WriteLine($"Created item in database with id: {member.Id} Operation consumed {response.RequestCharge} RUs.\n", response.Resource.Id, response.RequestCharge);
             }
             else

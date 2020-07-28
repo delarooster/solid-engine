@@ -21,7 +21,8 @@ namespace solid_engine.Controllers
 
         public async Task<IActionResult> Index()
         {
-            await WriteToCosmos.Write();
+            var username = "Austin DeLaRosa";
+            WriteToCosmos.Run(username);
             return View();
         }
         public IActionResult UserLogin()
