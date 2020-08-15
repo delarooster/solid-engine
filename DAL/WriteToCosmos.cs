@@ -57,9 +57,9 @@ namespace solid_engine.DAL
         */
         public async Task GetStartedDemoAsync(string username)
         {
-            _settings.EndpointUri = "https://solid-core-cosmosdb.documents.azure.com:443/";
+            _settings.EndpointUri = "";
             _settings.PrimaryKey =
-                "U5qQrCR9cau2QUVuC8lnjQfv9wTBQV5QDlIWM8CJMPt5ygYXpfG5xFMn33GNz5PKBvuvSpnLSQlbPExF6WrLrw==";
+                "";
             // Create a new instance of the Cosmos Client
             this.cosmosClient = new CosmosClient(_settings.EndpointUri, _settings.PrimaryKey);
             await this.CreateDatabaseAsync();
