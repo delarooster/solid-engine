@@ -25,8 +25,17 @@ steps:
           $(Agent.BuildDirectory)/s/*.csproj
 
 #deploy to Azure here
-    - task: PublishBuildArtifacts@1
-      displayName: "Upload Artifacts"
-      inputs:
-        pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
-        artifactName: 'solid-engine-artifact'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Visual Studio Professional Subscription(bf9e7049-96e4-45d9-be11-a638d2e7c46a)'
+    appType: 'webApp'
+    WebAppName: 'solid-core'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    
+- task: PublishBuildArtifacts@1
+    displayName: "Upload Artifacts"
+    inputs:
+      pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+      artifactName: 'solid-engine-artifact'
